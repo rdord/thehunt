@@ -7,10 +7,26 @@
   <!--<script language="javascript" src="libraries/p5.sound.js"></script>-->
   <script language="javascript" type="text/javascript" src="libraries/hunt.js"></script>
   <script language="javascript" type="text/javascript" src="sketch.js"></script>
-  <!-- this line removes any default padding and style. you might only need one of these values set. -->
-  <style> body {padding: 0; margin: 0;} </style>
+  <link href='https://fonts.googleapis.com/css?family=Sniglet:800' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="libraries/animate.css">
+  <style> 
+    body {padding: 0; margin: 0; font-family: 'Sniglet', cursive;} 
+    @keyframes blink {50% {color: #666699;}}
+    .Hero {height: 100vh; color: #CD5C5C; background-color: #FFCC00; font-size: 64px; display: flex; align-items: flex-end; justify-content: center; text-transform: uppercase; border-bottom: 2px dotted #CCCCCC; animation: blink .1s steps(1) infinite;}
+  	.Hero.Hero--removeAnimationOnHover:hover {color: #666699; background-color: #FFCC00;}
+    #GifHolder {background-color: #666699; display: flex; justify-content: center; align-items: center; border-top: 2px dashed #CCCCCC; border-bottom: 2px dotted #CD5C5C; overflow: hidden;}
+    /*.GifHolder img {margin: 100px 0;}*/
+    #GifHolder img {display: block; max-width: 100%; height: auto;}
+  </style>
 </head>
 
 <body>
+	<div class="Hero Hero--removeAnimationOnHover">
+		<p>Scroll down</p>
+	</div>
+  <div id="GifHolder">
+    
+  </div>
+
 </body>
 </html>
